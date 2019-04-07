@@ -1,0 +1,16 @@
+{
+  "name": "1c19-tp-1-master",
+  "version": "1.0.0",
+  "description": "> **La fecha de entrega para el informe y el código es el jueves 25/04** :bangbang:",
+  "main": "statsd.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^1.6.0-27",
+    "artillery-plugin-statsd": "^2.2.1",
+    "express": "^4.16.4"
+  }
+}
