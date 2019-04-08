@@ -1,0 +1,22 @@
+{
+  "name": "node.server",
+  "version": "1.0.0",
+  "description": "75.73 Node Web Server",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pera21/Arquitectura-Software-TP.git"
+  },
+  "author": "Coney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pera21/Arquitectura-Software-TP/issues"
+  },
+  "homepage": "https://github.com/pera21/Arquitectura-Software-TP#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
