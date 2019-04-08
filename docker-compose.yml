@@ -3,9 +3,13 @@ version: '2'
 services:
     node:
         build: ./js
+        ports:
+            - "3000:3000"
     
     gunicorn:
         build: ./py
+        ports:
+            - "8000:8000"
 
     nginx:
         image: nginx:1.15.8
