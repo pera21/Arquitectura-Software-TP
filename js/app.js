@@ -4,7 +4,7 @@ const port = 3000;
 
 app.get("/ping", (req, res) => res.status(200).json({'ping': 1}));
 
-app.get("/timeout/:timeout", (req, res) => {
+app.get("/proxy/:timeout", (req, res) => {
 	var time = req.params.timeout;
 	setTimeout(() => res.status(200).json({'timeout': time}), time*1000);
 });
