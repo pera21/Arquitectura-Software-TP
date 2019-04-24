@@ -2,14 +2,14 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/node/ping", (req, res) => res.status(200).json({'ping': 1}));
+app.get("/ping", (req, res) => res.status(200).json({'ping': 1}));
 
-app.get("/node/timeout/:timeout", (req, res) => {
+app.get("/timeout/:timeout", (req, res) => {
 	var time = req.params.timeout;
 	setTimeout(() => res.status(200).json({'timeout': time}), time*1000);
 });
 
-app.get("/node/fibonacci/:n", (req, res) => {
+app.get("/fibonacci/:n", (req, res) => {
 	var n = req.params.n;
 	res.status(200).json({'result': fibonacci(parseInt(n))});
 });
