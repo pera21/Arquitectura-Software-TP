@@ -7,13 +7,6 @@ config:
           host: localhost
           port: 8125
           prefix: "artillery-node"
-    nodes:
-      target: 'http://localhost:5555/nodes'
-      plugins:
-        statsd:
-          host: localhost
-          port: 8125
-          prefix: "artillery-nodes"
     gunicorn:
       target: 'http://localhost:5555/gunicorn'
       plugins:
@@ -21,13 +14,6 @@ config:
           host: localhost
           port: 8125
           prefix: "artillery-gunicorn"
-    gunicorns:
-      target: 'http://localhost:5555/gunicorns'
-      plugins:
-        statsd:
-          host: localhost
-          port: 8125
-          prefix: "artillery-gunicorns"
 
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
@@ -44,7 +30,7 @@ config:
       arrivalRate: 50
 
 scenarios:
-  - name: Ping! (/ping)
+  - name: Proxy2 (/proxy)
     flow:
       - get:
-          url: '/ping'
+          url: '/proxy/25'
