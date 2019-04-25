@@ -6,10 +6,40 @@ services:
         ports:
             - "3000:3000"
     
+    node1:
+        build: ./js
+        ports:
+            - "3001:3000"
+
+    node2:
+        build: ./js
+        ports:
+            - "3002:3000"
+
+    node3:
+        build: ./js
+        ports:
+            - "3003:3000"
+    
     gunicorn:
         build: ./py
         ports:
             - "8000:8000"
+
+    gunicorn1:
+        build: ./py
+        ports:
+            - "8001:8000"
+    
+    gunicorn2:
+        build: ./py
+        ports:
+            - "8002:8000"
+
+    gunicorn3:
+        build: ./py
+        ports:
+            - "8003:8000"
 
     nginx:
         image: nginx:1.15.8
@@ -21,6 +51,12 @@ services:
         links:
             - gunicorn
             - node
+            - node1
+            - node2
+            - node3
+            - gunicorn1
+            - gunicorn2
+            - gunicorn3
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.5-7
