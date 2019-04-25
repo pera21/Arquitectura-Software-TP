@@ -40,11 +40,11 @@ config:
       arrivalRate: 5
       rampTo: 50
     - name: High Load
-      duration: 300
+      duration: 180
       arrivalRate: 50
 
 scenarios:
   - name: Proxy3 (/proxy)
     flow:
       - get:
-          url: '/proxy/50'
+          url: '/proxy/5.0'
