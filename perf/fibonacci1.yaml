@@ -40,7 +40,7 @@ config:
       arrivalRate: 5
       rampTo: 50
     - name: High Load
-      duration: 300
+      duration: 180
       arrivalRate: 50
 
 scenarios:
