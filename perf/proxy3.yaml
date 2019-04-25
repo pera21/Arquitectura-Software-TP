@@ -47,4 +47,4 @@ scenarios:
   - name: Proxy3 (/proxy)
     flow:
       - get:
-          url: '/proxy/5.0'
+          url: '/proxy/3.0'
